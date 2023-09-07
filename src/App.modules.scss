@@ -3,23 +3,48 @@
 .App {
     background: #fedfe3;
     font-family: Kalam;
-
-    // background: #D49494;
-    padding: 40px;
-    .q1 {
-        width: 100px;
+    .q10 {
+        width: 200px;
         // position: relative;
         position: absolute;
-        right: 10px;
-        top: 20px;
+        right: 0px;
+        // top: 300px;
+        top: 260px;
+    }
+    .q11 {
+        width: 230px;
+        // position: relative;
+        position: absolute;
+        right: 100px;
+        // top: 300px;
+        top: 250px;
+        z-index: 99;
+    }
+    .q12 {
+        width: 200px;
+        // position: relative;
+        position: absolute;
+        // right: 5px;
+        left: 0;
+        // top: 300px;
+        top: 260px;
+    }
+ 
+    padding: 40px;
+    .q1 {
+        width: 130px;
+        // position: relative;
+        position: absolute;
+        right: 5px;
+        top: 300px;
     }
     .q2 {
-        width: 120px;
+        width: 130px;
         // position: relative;
         position: absolute;
         // left: -10px;
         left: 0;
-        top: 20px;
+        top: 300px;
         transform: rotate(90deg);
     }
     .q5 {
@@ -41,17 +66,18 @@
         position: absolute;
         right: 0px;
         // transform: rotate(160deg);
-        bottom: -90px;
+        bottom: -450px;
     }
     .q8 {
         width: 125px;
         position: absolute;
-        left: -10px;
-        bottom: -90px;
+        left: 0px;
+        bottom: -450px;
     }
     .main {
-        width: 300px;
-        height: 105vh;
+        width: 90%;
+        // height: 110vh;
+        height: 120%;
         background: #f3e3e5;
         position: relative;
         border-radius: 200px 200px 200px 200px;
@@ -76,7 +102,8 @@
     .block {
         padding: 20px;
         margin: 0 auto;
-        width: 230px;
+        // width: 230px;
+        width: 80%;
         background: #fedfe3;
         border-radius: 5px;
         .q4 {
@@ -117,6 +144,7 @@
         width: 230px;
         background: #fedfe3;
         border-radius: 5px;
+        margin-bottom: 100px;
         .block22 {
             position: relative;
             padding: 10px;
@@ -131,6 +159,62 @@
                 font-weight: 700;
                 font-family: Caladea;
             }
+        }
+    }
+}
+.header {
+    // width: 380px;
+    width: 100%;
+    height: 60px;
+    background: #fedfe3;
+    margin: 0 auto;
+    .text-header {
+        // margin-top: 20px;
+        margin: 0 auto;
+
+        // line-height: 96.5%; /* 23.16px */
+    }
+    h1 {
+        color: #965a00;
+
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Caladea;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+    }
+}
+.image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    background: #000;
+
+    img {
+        // width: 390px;
+        width: 100%;
+        height: 250px;
+        background-size: auto;
+        position: relative;
+        opacity: 0.7;
+    }
+    .text-block {
+        margin-top: 20px;
+        position: absolute;
+        margin: 0 auto;
+        z-index: 3;
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-family: Caladea;
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 7.32px;
         }
     }
 }
