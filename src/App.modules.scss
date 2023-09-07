@@ -1,15 +1,19 @@
 // @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 .App {
     background: #fedfe3;
-    font-family: Kalam;
+        font-family: 'Pacifico', cursive;
+    position: relative;
     .q10 {
+        z-index: 3;
         width: 200px;
         // position: relative;
         position: absolute;
         right: 0px;
         // top: 300px;
-        top: 260px;
+        top: -40px;
     }
     .q11 {
         width: 230px;
@@ -17,17 +21,18 @@
         position: absolute;
         right: 100px;
         // top: 300px;
-        top: 250px;
+        top: -40px;
         z-index: 99;
     }
     .q12 {
+        z-index: 3;
         width: 200px;
         // position: relative;
         position: absolute;
         // right: 5px;
         left: 0;
         // top: 300px;
-        top: 260px;
+        top: -40px;
     }
  
     padding: 40px;
@@ -35,7 +40,7 @@
         width: 130px;
         // position: relative;
         position: absolute;
-        right: 5px;
+        right: -35px;
         top: 300px;
     }
     .q2 {
@@ -57,8 +62,8 @@
     .q6 {
         position: absolute;
         width: 180px;
-        left: 70px;
-        top: 540px;
+        left: calc(80% - 180px);
+        top: 57%;
         z-index: 33;
     }
     .q7 {
@@ -66,18 +71,19 @@
         position: absolute;
         right: 0px;
         // transform: rotate(160deg);
-        bottom: -450px;
+        top: 40px;
     }
     .q8 {
         width: 125px;
         position: absolute;
-        left: 0px;
-        bottom: -450px;
+        left: 10px;
+        top: 50px;
     }
     .main {
         width: 90%;
         // height: 110vh;
-        height: 120%;
+        min-height: 160vh;
+        // padding: 20vh 0;
         background: #f3e3e5;
         position: relative;
         border-radius: 200px 200px 200px 200px;
@@ -88,11 +94,13 @@
             color: #d49494;
             text-align: center;
             h2 {
-                font-family: Kalam;
+                font-family: 'Pacifico', cursive;
+                font-weight: 200;
+                letter-spacing: 5px;
             }
             h1 {
                 margin-top: 60px;
-                font-family: Kalam;
+                font-size: 30px;
             }
             .q3 {
                 width: 150px;
@@ -102,7 +110,7 @@
     .block {
         padding: 20px;
         margin: 0 auto;
-        // width: 230px;
+        width: 230px;
         width: 80%;
         background: #fedfe3;
         border-radius: 5px;
@@ -114,7 +122,7 @@
         }
         .block1 {
             position: relative;
-            width: 230px;
+            width: 100%;
             border: 2px solid #bb9096;
             border-radius: 10px;
             .data1 {
@@ -129,8 +137,6 @@
                     margin-top: 3px;
                     text-align: center;
                     align-items: center;
-                    font-weight: 700;
-                    font-family: Caladea;
                 }
                 img {
                     width: 20px;
@@ -140,24 +146,24 @@
     }
     .block2 {
         padding: 20px;
-        margin: 0 auto;
-        width: 230px;
+        margin: 50px auto;
+        width: 80%;
         background: #fedfe3;
         border-radius: 5px;
-        margin-bottom: 100px;
         .block22 {
             position: relative;
-            padding: 10px;
-            width: 210px;
+            width: 100%;
             border: 2px solid #bb9096;
             border-radius: 10px;
-            span {
-                font-size: 12px;
-                margin-top: 3px;
-                text-align: center;
-                align-items: center;
-                font-weight: 700;
-                font-family: Caladea;
+            .block22-2 {
+
+                padding: 10px;
+                span {
+                    font-size: 12px;
+                    // margin-top: 3px;
+                    text-align: center;
+                    align-items: center;
+                }
             }
         }
     }
@@ -212,9 +218,41 @@
             text-align: center;
             color: #fff;
             font-family: Caladea;
+
             font-size: 28px;
             font-weight: 500;
             letter-spacing: 7.32px;
+        }
+    }
+}
+
+.bg-opacity-image {
+    max-width: 1400px;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(#0000, #0000, #0000, #fedfe3);
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+}
+span, p, a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+}
+@media screen and (max-width: 385px) {
+    .App {
+        .q5 {
+            display: none;
+        }
+        .q6 {
+            top: 60%;
+            left: 14%;
+        }
+        .main {
+            min-height: 170vh;
         }
     }
 }
